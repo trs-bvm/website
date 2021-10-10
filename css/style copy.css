@@ -1,0 +1,71 @@
+.curtain {
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+}
+
+.curtain__wrapper {
+  width: 100%;
+  height: 100%;
+}
+
+.curtain__panel {
+  background :black;
+  width: 50%;
+  height: 100%;
+  float: left;
+  position: relative;
+  z-index: 2;
+  transition: all 1s ease-out;
+ 
+}
+
+.curtain__panel--left {
+  
+  transform: translateX(-110%);
+  
+}
+
+.curtain__panel--right {
+  
+  
+ 
+  transform: translateX(100%);
+}
+body{
+  background:black;
+
+}
+
+.curtain__prize {
+  background:black;
+  position: absolute;
+  z-index: 1;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+input[type=checkbox] {
+  position: absolute;
+  cursor: pointer;
+  width: 100%;
+  height: 100%;
+  z-index: 100;
+  opacity: 0;
+}
+
+input[type=checkbox]:checked ~ div.curtain__panel--left {
+  transform: translateX(0);
+}
+
+input[type=checkbox]:checked ~ div.curtain__panel--right {
+  transform: translateX(0);
+}
+
+img {
+  width: 55vw;
+  height: 55vh;
+}
