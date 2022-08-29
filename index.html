@@ -28,6 +28,21 @@
 
   <!-- Template Main CSS File -->
   <link href="assets/css/style.css" rel="stylesheet">
+  <style>
+    .videoWrapper {
+position: relative;
+padding-bottom: 56.25%; /* 16:9 */
+padding-top: 25px;
+height: 0;
+}
+.videoWrapper iframe {
+position: absolute;
+top: 0;
+left: 0;
+width: 100%;
+height: 100%;
+}
+  </style>
 </head>
 
 <body>
@@ -132,10 +147,12 @@
         <div class="col-lg-6 order-1 order-lg-2 hero-img" data-aos="fade-left">
 
           <!-- <img src="assets/img/about.jpg" class="img-fluid" alt="this slowpoke moves"> -->
+          <videoWrapper>
           <iframe width="560" height="315" src="https://www.youtube.com/embed/xd4JUF1lAPY" title="YouTube video player"
             frameborder="0"
             allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
             allowfullscreen></iframe>
+          </videoWrapper>
         </div>
       </div>
     </div>
